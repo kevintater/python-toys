@@ -11,8 +11,8 @@ import time
 RoboArm = usb.core.find(idVendor=0x1267, idProduct=0x000) 
 
 
-#if RoboArm is None:
-#    raise ValueError("Arm not found")
+if RoboArm is None:
+    raise ValueError("Arm not found")
 
 Duration = .1
 
@@ -47,40 +47,40 @@ def main(stdscr):
             # return curser to start position
             stdscr.move(0, 0)
             if c == 113: # Letter q
-               #MoveArm(.1,[0,0,1]) #Light on
+               MoveArm(.1,[0,0,1]) #Light on
                pass
             if c == 97: # letter a
-               #MoveArm(.1,[0,0,0] #Light off)
+               MoveArm(.1,[0,0,0] #Light off)
                pass
             if c == 115: # letter w
-               #MoveArm(.1,[2,0,0]) #Grip open
+               MoveArm(.1,[2,0,0]) #Grip open
                pass
             if c == 119: # letter s 
-               #MoveArm(.1,[1,0,0]) #Grip close
+               MoveArm(.1,[1,0,0]) #Grip close
                pass
             if c == 101: # letter e
-               #MoveArm(.1,[4,0,0]) #Wrist up
+               MoveArm(.1,[4,0,0]) #Wrist up
                pass
             if c == 100: # letter d
-               #MoveArm(.1,[8,0,0]) # Wrist down
+               MoveArm(.1,[8,0,0]) # Wrist down
                pass
             if c == 104: # letter r
-               #MoveArm(.1,[16,0,0]) #Elbow up
+               MoveArm(.1,[16,0,0]) #Elbow up
                pass
             if c == 102: # letter f
-               #MoveArm(.1,[32,0,0]) #Elbow down
+               MoveArm(.1,[32,0,0]) #Elbow down
                pass
             if c == 116: # letter t
-               #MoveArm(.1,[64,0,0]) #Shoulder up
+               MoveArm(.1,[64,0,0]) #Shoulder up
                pass
             if c == 103: # letter g
-               #MoveArm(1,[128,0,0]) #Shoulder down
+               MoveArm(1,[128,0,0]) #Shoulder down
                pass
             if c == 121: # letter y
-               #MoveArm(.1,[0,1,0]) #Rotate base anti-clockwise
+               MoveArm(.1,[0,1,0]) #Rotate base anti-clockwise
                pass
             if c == 104: # letter h
-               #MoveArm(.1,[0,2,0]) #Rotate base clockwise
+               MoveArm(.1,[0,2,0]) #Rotate base clockwise
                pass
             
        # else: 
